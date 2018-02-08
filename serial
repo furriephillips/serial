@@ -1,21 +1,21 @@
-#!/bin/sh
+#!/bin/zsh
 #
 ## serial - connect to the serial port, using "screen", giving clues as to usage
 #
 
-/bin/echo -n "[1;36m"
-/bin/echo -e "[1;36m\t ____            _       _ "
-/bin/echo -e "[1;36m\t/ ___|[0;33mConnecting[1;36m(_) __ _| |\t[0;33mTo exit the serial console session,"
-/bin/echo -e "[1;36m\t\___ \ / _ \ '__| |/ _\` | | \t[0;33muse the following key sequence: -"
-/bin/echo -e "[1;36m\t ___) |  __/ |  | | (_| | |"
-/bin/echo -e "[1;36m\t|____/ \___|_|  |_|\__,_|_|\t[1;36mCtrl [1;35m+ [1;36mA [1;35m+ [1;36mK [1;35m+ [1;36mY"
-/bin/echo "[0m"
+/bin/echo -n "\e[1;36m"
+/bin/echo -e "\e[1;36m\t ____            _       _ "
+/bin/echo -e "\e[1;36m\t/ ___|\e[0;33mConnecting\e[1;36m(_) __ _| |\t\e[0;33mTo exit the serial console session,"
+/bin/echo -e "\e[1;36m\t\___ \ / _ \ '__| |/ _\` | | \t\e[0;33muse the following key sequence: -"
+/bin/echo -e "\e[1;36m\t ___) |  __/ |  | | (_| | |"
+/bin/echo -e "\e[1;36m\t|____/ \___|_|  |_|\__,_|_|\t\e[1;36mCtrl \e[1;35m+ \e[1;36mA \e[1;35m+ \e[1;36mK \e[1;35m+ \e[1;36mY"
+/bin/echo "\e[0m"
 
 /bin/sleep 14
 
 /usr/bin/sudo /usr/bin/screen -S SerialPort /dev/ttyUSB0 9600
 
-/bin/echo -e "\n\t[1;32mSerial Port Disconnected[0m\n"
+/bin/echo -e "\n\t\e[1;32mSerial Port Disconnected\e[0m\n"
 
 exit 0
 
